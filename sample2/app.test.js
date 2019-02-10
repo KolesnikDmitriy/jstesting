@@ -1,29 +1,25 @@
 const http = require('http');
-const assert = require('assert');
 const { options } = require('../options');
 
-function testPassed() {
+test('GET localhost:3000 expect 200 and hello message', () => {
   const req = http.request(options, res => {
     const { statusCode } = res;
-    assert.deepEqual(statusCode, '200');
+    expect(statusCode).toBe(200);
 
     res.setEncoding('utf8');
     res.on('data', chunk => {
-      assert.deepEqual(chunk, 'Hello Node.js Server!');
+      expect(chunk).toBe('Hello Node.js Server!');
     });
   });
   req.end();
-}
+});
 
-function testFailed() {
+test('test should fail', () => {
   const req = http.request(options, res => {
     res.setEncoding('utf8');
     res.on('data', chunk => {
-      assert.deepEqual(chunk, 'This is not Node.js server!');
+      expect(chunk).toBe('This is not Node.js server!');
     });
   });
   req.end();
-}
-
-testPassed();
-testFailed();
+});

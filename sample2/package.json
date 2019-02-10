@@ -1,0 +1,14 @@
+{
+  "name": "sample2",
+  "version": "1.0.0",
+  "description": "simple test framework using jest",
+  "main": "app.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Dima Kolesnik",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.1.0"
+  }
+}
