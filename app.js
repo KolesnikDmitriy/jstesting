@@ -3,6 +3,9 @@ const port = 3000;
 
 const requestHandler = (request, response) => {
   console.log(request.url);
+  response.setHeader('Access-Control-Allow-Origin', ['*']);
+  response.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   response.end('Hello Node.js Server!');
 };
 
