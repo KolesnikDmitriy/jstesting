@@ -1,5 +1,6 @@
 const http = require('http');
-const port = 3000;
+const { options } = require('./options');
+const { port } = options;
 
 const requestHandler = (request, response) => {
   console.log(request.url);

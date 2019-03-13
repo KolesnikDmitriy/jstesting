@@ -9,6 +9,6 @@
   "author": "Dima Kolesnik",
   "license": "ISC",
   "dependencies": {
-    "jest": "^24.1.0"
+    "jest": "^24.5.0"
   }
 }
