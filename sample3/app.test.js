@@ -10,7 +10,7 @@ test('GET localhost:3000 expect 200 and hello message', async () => {
   expect(data).toBe('Hello Node.js Server!');
 });
 
-test('should fail', async () => {
+test('expect fail', async () => {
   const { data } = await axios.get();
 
   expect(data).toBe('This is Node.js Server!');
